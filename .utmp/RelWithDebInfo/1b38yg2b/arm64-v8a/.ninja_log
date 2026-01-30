@@ -1,0 +1,21 @@
+# ninja log v5
+106	554	7911553997309983	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	440352d76e7227ce
+25	2956	7911554021398986	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	4aa231c75dbceb34
+556	1527	7911554002098443	F:/Programming Games/Financial accounting/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/1b38yg2b/obj/arm64-v8a/libswappywrapper.so	a76782fcfa4f6d96
+37	2175	7911554013555116	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	1fab888520735b05
+14	2251	7911554014320430	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	c1602a32ed1385e2
+1	2514	7911554016861251	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	4d912afc8ee7a60a
+52	2370	7911554015553932	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	4c88c15d4d81b0f8
+88	2541	7911554017059338	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	984db76ad447eec6
+74	2831	7911554020129430	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	f5353172a31da7a2
+2957	3193	7911554023099308	F:/Programming Games/Financial accounting/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/1b38yg2b/obj/arm64-v8a/libgame.so	e1ba88bcbe8bce5e
+54	252	7911616072275004	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	440352d76e7227ce
+253	595	7911616074872155	F:/Programming Games/Financial accounting/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/1b38yg2b/obj/arm64-v8a/libswappywrapper.so	a76782fcfa4f6d96
+17	1270	7911616082382249	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	c1602a32ed1385e2
+46	1296	7911616082747420	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	1fab888520735b05
+31	1320	7911616082965502	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	4c88c15d4d81b0f8
+38	1401	7911616083781965	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	984db76ad447eec6
+24	1453	7911616084291747	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	4d912afc8ee7a60a
+10	1607	7911616085849770	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	f5353172a31da7a2
+3	1684	7911616086640857	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	4aa231c75dbceb34
+1684	1844	7911616087651974	F:/Programming Games/Financial accounting/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/1b38yg2b/obj/arm64-v8a/libgame.so	e1ba88bcbe8bce5e

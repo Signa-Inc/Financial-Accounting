@@ -1,0 +1,902 @@
+Using pre-set license
+Built from '2023.2/release' branch; Version is '2023.2.22f1 (6b19bf4f8115) revision 7018943'; Using compiler version '193431935'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22631) 64bit Professional' Language: 'ru' Physical Memory: 32631 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2023.2.22f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+F:/Programming Games/Financial accounting
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+64090
+-job-worker-count
+5
+-background-job-worker-count
+8
+-asset-garbage-collectors
+1
+Successfully changed project path to: F:/Programming Games/Financial accounting
+F:/Programming Games/Financial accounting
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [16232] Host "[IP] 172.27.0.1 [Port] 0 [Flags] 2 [Guid] 654885791 [EditorId] 654885791 [Version] 1048832 [Id] WindowsEditor(7,XYZ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [16232] Host "[IP] 172.27.0.1 [Port] 0 [Flags] 2 [Guid] 654885791 [EditorId] 654885791 [Version] 1048832 [Id] WindowsEditor(7,XYZ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 5
+[Physics::Module] Initialized MultithreadedJobDispatcher with 5 workers.
+Library Redirect Path: Library/
+Refreshing native plugins compatible for Editor in 1.76 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2023.2.22f1 (6b19bf4f8115)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2023.2.22f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path F:/Programming Games/Financial accounting/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2060 SUPER (ID=0x1f06)
+    Vendor:   NVIDIA
+    VRAM:     8006 MB
+    Driver:   32.0.15.8142
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2023.2.22f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2023.2.22f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2023.2.22f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56808
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2023.2.22f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2023.2.22f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2023.2.22f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2023.2.22f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Registered in 0.005328 seconds.
+- Loaded All Assemblies, in  0.417 seconds
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+Native extension for iOS target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 274 ms
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.691 seconds
+Domain Reload Profiling: 1106ms
+	BeginReloadAssembly (142ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (41ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (52ms)
+	LoadAllAssembliesAndSetupDomain (169ms)
+		LoadAssemblies (140ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (166ms)
+			TypeCache.Refresh (164ms)
+				TypeCache.ScanAssembly (152ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (692ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (635ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (391ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (6ms)
+			ProcessInitializeOnLoadAttributes (171ms)
+			ProcessInitializeOnLoadMethodAttributes (62ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image F:\Programming Games\Financial accounting\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\Programming Games\Financial accounting\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.886 seconds
+Refreshing native plugins compatible for Editor in 0.77 ms, found 4 plugins.
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.46 ms, found 4 plugins.
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.059 seconds
+Domain Reload Profiling: 1943ms
+	BeginReloadAssembly (339ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (35ms)
+	RebuildCommonClasses (37ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (35ms)
+	LoadAllAssembliesAndSetupDomain (460ms)
+		LoadAssemblies (374ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (189ms)
+			TypeCache.Refresh (154ms)
+				TypeCache.ScanAssembly (137ms)
+			BuildScriptInfoCaches (28ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (1060ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (821ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (21ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (101ms)
+			ProcessInitializeOnLoadAttributes (639ms)
+			ProcessInitializeOnLoadMethodAttributes (50ms)
+			AfterProcessingInitializeOnLoad (5ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Refreshing native plugins compatible for Editor in 0.96 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 29 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 4369 unused Assets / (1.5 MB). Loaded Objects now: 4964.
+Memory consumption went from 116.2 MB to 114.7 MB.
+Total: 11.052500 ms (FindLiveObjects: 0.574500 ms CreateObjectMapping: 0.762400 ms MarkObjects: 7.697800 ms  DeleteObjects: 2.016500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 615224.403226 seconds.
+  path: Assets/Textures/UI/SceneTextures/Btn_OwnedItem.png
+  artifactKey: Guid(336bdebe84da36049b5753f32b472003) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/SceneTextures/Btn_OwnedItem.png using Guid(336bdebe84da36049b5753f32b472003) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '10802b36483df0e9c0db514a6bcdc6a0') in 0.1121268 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Textures/UI/SceneTextures/bg_Failed.png
+  artifactKey: Guid(41dc97a5fa7e660409c64f842b18a9e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/SceneTextures/bg_Failed.png using Guid(41dc97a5fa7e660409c64f842b18a9e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7c99431a49079590b31ee425a00c61ee') in 0.0549792 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Textures/UI/SceneTextures/Btn_Character_Select.png
+  artifactKey: Guid(ecb9d5b2eec20704da6a7b1a9239a653) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/SceneTextures/Btn_Character_Select.png using Guid(ecb9d5b2eec20704da6a7b1a9239a653) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0b558984d56de9a2ce0c683c71b18933') in 0.0268536 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/Textures/UI/SceneTextures/Btn_TreasureChest_n.png
+  artifactKey: Guid(768b1a893c446294b9173c8bc9622fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/SceneTextures/Btn_TreasureChest_n.png using Guid(768b1a893c446294b9173c8bc9622fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a27d00bb099c0994787eb7e46217f81a') in 0.0228538 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Textures/UI/SceneTextures/bg_Win.png
+  artifactKey: Guid(d5403212fdcf84448a0bb839ce0eaf6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/SceneTextures/bg_Win.png using Guid(d5403212fdcf84448a0bb839ce0eaf6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9a2a633f4d020a533970e0a44de1cba3') in 0.0400483 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Textures/UI/Components/CheckBox_On.png
+  artifactKey: Guid(29b9175aa3b062940b84378d60df9335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Components/CheckBox_On.png using Guid(29b9175aa3b062940b84378d60df9335) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '980eae5457b2549af27743c035a5e0c8') in 0.0225825 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Textures/UI/SceneTextures/bg_TextContent3.png
+  artifactKey: Guid(8202264c52381c04688aafd6ff4aa5c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/SceneTextures/bg_TextContent3.png using Guid(8202264c52381c04688aafd6ff4aa5c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4273a7d3bc5fdf8a9e7eaf0ec495cfc5') in 0.0303835 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Textures/UI/SceneTextures/Btn_Character_n.png
+  artifactKey: Guid(b268d5103e37ba44caa886d4df2b360d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/SceneTextures/Btn_Character_n.png using Guid(b268d5103e37ba44caa886d4df2b360d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fa14011a654ec581f2dac1a2e695b8aa') in 0.0186303 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.061925 seconds.
+  path: Assets/Textures/UI/Components/CircleBar_Green.png
+  artifactKey: Guid(67ccb38707945404a97fb554e30b097b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Components/CircleBar_Green.png using Guid(67ccb38707945404a97fb554e30b097b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4f075fb615bf4c295d41dcc25319f697') in 0.0194885 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.039548 seconds.
+  path: Assets/Textures/UI/Components/CircleBar_Red.png
+  artifactKey: Guid(a1763c088fa4a5047b7fd7156ca0b361) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Components/CircleBar_Red.png using Guid(a1763c088fa4a5047b7fd7156ca0b361) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0222c0a14f6c4b16a3eec1dd6fcd30e1') in 0.0213833 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.040615 seconds.
+  path: Assets/Textures/UI/Components/CircleBar_Yellow.png
+  artifactKey: Guid(4f7bd4731c33b7c409ba9e9bb510d7d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Components/CircleBar_Yellow.png using Guid(4f7bd4731c33b7c409ba9e9bb510d7d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b51a04fe044e2e9b88bf703d1e53aa4c') in 0.0220122 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.628632 seconds.
+  path: Assets/Textures/UI/Buttons/EllipticalButtons/EllipticalBtn1_Blue_n.png
+  artifactKey: Guid(7c2957c49689e3a478c0c3c4a4a75871) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/EllipticalButtons/EllipticalBtn1_Blue_n.png using Guid(7c2957c49689e3a478c0c3c4a4a75871) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '67e1b6fcddb5507a719009a712705902') in 0.0305286 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003079 seconds.
+  path: Assets/Textures/UI/Buttons/EllipticalButtons/EllipticalBtn1_Gray_n.png
+  artifactKey: Guid(725b8caff3303eb45a0e5b6b43b35d84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/EllipticalButtons/EllipticalBtn1_Gray_n.png using Guid(725b8caff3303eb45a0e5b6b43b35d84) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e2dd46763e6321b5c30cf72d3f8acd03') in 0.0246261 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.099260 seconds.
+  path: Assets/Textures/UI/Buttons/EllipticalButtons/EllipticalBtn1_Green_n.png
+  artifactKey: Guid(0b0a8412ba4622b46a16189815dad54a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/EllipticalButtons/EllipticalBtn1_Green_n.png using Guid(0b0a8412ba4622b46a16189815dad54a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '83acdf7fb1ca627a44b4fae6e9cfc061') in 0.0196022 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.075699 seconds.
+  path: Assets/Textures/UI/Buttons/EllipticalButtons/EllipticalBtn1_Purple_n.png
+  artifactKey: Guid(84ed68ef035f1154f9cf12d1a2304832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/EllipticalButtons/EllipticalBtn1_Purple_n.png using Guid(84ed68ef035f1154f9cf12d1a2304832) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a9d86d2e8a75ad3688de473b57ad3605') in 0.0204476 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.314412 seconds.
+  path: Assets/Textures/UI/Buttons/EllipticalButtons/EllipticalBtn1_Turquoise_n.png
+  artifactKey: Guid(36e44db85fdf4c7418a5c8e7bd769dc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/EllipticalButtons/EllipticalBtn1_Turquoise_n.png using Guid(36e44db85fdf4c7418a5c8e7bd769dc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '35827953bb88086d94e790452d487085') in 0.0192498 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.008016 seconds.
+  path: Assets/Textures/UI/Buttons/EllipticalButtons/EllipticalBtn1_Yellow_n.png
+  artifactKey: Guid(bae1441c4a284d1418694d6950725443) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/EllipticalButtons/EllipticalBtn1_Yellow_n.png using Guid(bae1441c4a284d1418694d6950725443) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '88684821e96d0270cf94611e02425bb2') in 0.0326678 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.266450 seconds.
+  path: Assets/Textures/UI/Buttons/EllipticalButtons/EllipticalBtn2_Blue_n.png
+  artifactKey: Guid(82787dac47446f146b134fa1b3ebd75b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/EllipticalButtons/EllipticalBtn2_Blue_n.png using Guid(82787dac47446f146b134fa1b3ebd75b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f0160a097c08187070e02337f3dcdbd5') in 0.0235075 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.068130 seconds.
+  path: Assets/Textures/UI/Buttons/EllipticalButtons/EllipticalBtn2_Green_n.png
+  artifactKey: Guid(0fe52d32b07e0b24d939f442aa262584) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/EllipticalButtons/EllipticalBtn2_Green_n.png using Guid(0fe52d32b07e0b24d939f442aa262584) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '06001583c29b82bc219d14c5768296b7') in 0.0223779 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.245811 seconds.
+  path: Assets/Textures/UI/Buttons/EllipticalButtons/EllipticalBtn2_Purple_n.png
+  artifactKey: Guid(9276946c65345804ca0e044f40ca77be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/EllipticalButtons/EllipticalBtn2_Purple_n.png using Guid(9276946c65345804ca0e044f40ca77be) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'dfbfaf4eb7fe5557f0a0eecdc0c4e4dd') in 0.0139025 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.007181 seconds.
+  path: Assets/Textures/UI/Buttons/EllipticalButtons/EllipticalBtn2_Red_n.png
+  artifactKey: Guid(d20294e7c5a885148b62017ea2ff94f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/EllipticalButtons/EllipticalBtn2_Red_n.png using Guid(d20294e7c5a885148b62017ea2ff94f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '84918fe29837d9487dc08742d2c0045a') in 0.0151903 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.056046 seconds.
+  path: Assets/Textures/UI/Buttons/EllipticalButtons/EllipticalBtn2_Turquoise_n.png
+  artifactKey: Guid(b57700264686b4642abc0c077654a41c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/EllipticalButtons/EllipticalBtn2_Turquoise_n.png using Guid(b57700264686b4642abc0c077654a41c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ee8fc15f557b426b1aeaabcb9d54bf1e') in 0.0160058 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.225092 seconds.
+  path: Assets/Textures/UI/Buttons/EllipticalButtons/EllipticalBtn2_Yellow_n.png
+  artifactKey: Guid(9a7e541e64d57b44ab83f3577a0fc024) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/EllipticalButtons/EllipticalBtn2_Yellow_n.png using Guid(9a7e541e64d57b44ab83f3577a0fc024) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7be74254fa9ef7ce57e1cd10aa8b9f94') in 0.0189261 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.067594 seconds.
+  path: Assets/Textures/UI/BasicShapes/EllipticalRectangle1.png
+  artifactKey: Guid(91db18b4fda01354dab70081b0c03bfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/BasicShapes/EllipticalRectangle1.png using Guid(91db18b4fda01354dab70081b0c03bfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6641a952fdf24c3971fc1fb996191d99') in 0.0171401 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.232595 seconds.
+  path: Assets/Textures/UI/BasicShapes/EllipticalRectangle5.png
+  artifactKey: Guid(d282a03ffcf9c4e45a3ae99cabb176ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/BasicShapes/EllipticalRectangle5.png using Guid(d282a03ffcf9c4e45a3ae99cabb176ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '77c32200ac62d6257f23b5a1d28c3f5d') in 0.0172861 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005373 seconds.
+  path: Assets/Textures/UI/Buttons/SmallButtons/EllipticalSmallBtn_Blue_p.png
+  artifactKey: Guid(99bd00fe7c8fb5f4191a8237129da922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/SmallButtons/EllipticalSmallBtn_Blue_p.png using Guid(99bd00fe7c8fb5f4191a8237129da922) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2a250a36c1646a7758c334c9959b3007') in 0.0180918 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.030086 seconds.
+  path: Assets/Textures/UI/Buttons/SmallButtons/EllipticalSmallBtn_Gray_p.png
+  artifactKey: Guid(114df30527169c3448513df9f6b58eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/SmallButtons/EllipticalSmallBtn_Gray_p.png using Guid(114df30527169c3448513df9f6b58eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '65a08689fea9a819675cd1b38c8d3904') in 0.0170302 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.029696 seconds.
+  path: Assets/Textures/UI/Buttons/SmallButtons/EllipticalSmallBtn_Green_p.png
+  artifactKey: Guid(12c476f0e39ce4f42b8b91be3dce61e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/SmallButtons/EllipticalSmallBtn_Green_p.png using Guid(12c476f0e39ce4f42b8b91be3dce61e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4f1c3ce8f1b10c307e2c0e27c5f6f711') in 0.0162137 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.172007 seconds.
+  path: Assets/Textures/UI/Buttons/SmallButtons/EllipticalSmallBtn_Pink_p.png
+  artifactKey: Guid(382fed95c827c2946b570199dad8043b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/SmallButtons/EllipticalSmallBtn_Pink_p.png using Guid(382fed95c827c2946b570199dad8043b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4072a39c97953cb1e8dddd30beba4a9c') in 0.0171262 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003866 seconds.
+  path: Assets/Textures/UI/Buttons/SmallButtons/EllipticalSmallBtn_Purple_p.png
+  artifactKey: Guid(3fe5024d9830f57489aca79851dac8bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/SmallButtons/EllipticalSmallBtn_Purple_p.png using Guid(3fe5024d9830f57489aca79851dac8bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b61e75f86ceaa301fd3c926cae3cca48') in 0.0184483 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.030570 seconds.
+  path: Assets/Textures/UI/Buttons/SmallButtons/EllipticalSmallBtn_Red_p.png
+  artifactKey: Guid(b60dee4c9892ddc459060eae59347a1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/SmallButtons/EllipticalSmallBtn_Red_p.png using Guid(b60dee4c9892ddc459060eae59347a1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3de8c450021a8388ef89cf39bfcad618') in 0.017132 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.029774 seconds.
+  path: Assets/Textures/UI/Buttons/SmallButtons/EllipticalSmallBtn_Turquoise_p.png
+  artifactKey: Guid(28be7ab1abafc2f41a45e305d08fd98a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/SmallButtons/EllipticalSmallBtn_Turquoise_p.png using Guid(28be7ab1abafc2f41a45e305d08fd98a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '19b303d37a2c790f43604ffc8aebdce4') in 0.0218676 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.218811 seconds.
+  path: Assets/Textures/UI/Buttons/SmallButtons/EllipticalSmallBtn_Yellow_p.png
+  artifactKey: Guid(e6036710d7bd40a4e9e1452753047b2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/SmallButtons/EllipticalSmallBtn_Yellow_p.png using Guid(e6036710d7bd40a4e9e1452753047b2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '038b2e0ab948fbe2c9220ba315181d09') in 0.0158605 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.007218 seconds.
+  path: Assets/Textures/UI/Components/EmittingLight2White.png
+  artifactKey: Guid(1acc65b999212ee459f3fafe28a0debf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Components/EmittingLight2White.png using Guid(1acc65b999212ee459f3fafe28a0debf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8667f2e581176bf07dc897b414f03fd5') in 0.0240687 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.028952 seconds.
+  path: Assets/Textures/UI/Components/EmittingLight4White.png
+  artifactKey: Guid(1a27b57cd72252a4a804ec7f0667fbc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Components/EmittingLight4White.png using Guid(1a27b57cd72252a4a804ec7f0667fbc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8db2fdeb1b1086f7a4561541f02e5eae') in 0.0210351 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.219788 seconds.
+  path: Assets/Textures/Ruble.png
+  artifactKey: Guid(697c9d309e820c549bc811eb7c8c3ba8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Ruble.png using Guid(697c9d309e820c549bc811eb7c8c3ba8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8eeb6a0e05b546fd6025a97890a9741c') in 0.0204859 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.055453 seconds.
+  path: Assets/Textures/UI/ItemIcons/Icon_Bottle2.png
+  artifactKey: Guid(0ddf3f60813ff774eb64e6c2d2c9deeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/ItemIcons/Icon_Bottle2.png using Guid(0ddf3f60813ff774eb64e6c2d2c9deeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3a4c018f7b9f9442d973dfa4aa34d9c5') in 0.0181812 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.047104 seconds.
+  path: Assets/Textures/UI/ItemIcons/Icon_Clock1.png
+  artifactKey: Guid(1785ac5688470ca48baf567ccc16f78d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/ItemIcons/Icon_Clock1.png using Guid(1785ac5688470ca48baf567ccc16f78d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '61db745a3cb1382ba2c5b36ab00b3924') in 0.0190836 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.243756 seconds.
+  path: Assets/Textures/UI/ItemIcons/Icon_Crown2.png
+  artifactKey: Guid(9d36d5102f919aa4695ca3e98441b8e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/ItemIcons/Icon_Crown2.png using Guid(9d36d5102f919aa4695ca3e98441b8e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a1100f58d2f7e5eaf60d77ed92c2ccce') in 0.0232437 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.532894 seconds.
+  path: Assets/Textures/UI/ItemIcons/Icon_DiamonBlue.png
+  artifactKey: Guid(ca1aaaf2c5b472b47b19819583b4d928) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/ItemIcons/Icon_DiamonBlue.png using Guid(ca1aaaf2c5b472b47b19819583b4d928) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0054799f8cb7f6b78013e83abec664f7') in 0.0196244 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.070288 seconds.
+  path: Assets/Textures/UI/ItemIcons/Icon_DiamonRed.png
+  artifactKey: Guid(34519829b296c2f4fa7258e5d0fb1973) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/ItemIcons/Icon_DiamonRed.png using Guid(34519829b296c2f4fa7258e5d0fb1973) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ee48a34b2d87ad47f474b11eefd3dc7c') in 0.022615 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.043196 seconds.
+  path: Assets/Textures/UI/ItemIcons/Icon_EnergyRed.png
+  artifactKey: Guid(1cb320f3457e51041a3cd2e09bfded49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/ItemIcons/Icon_EnergyRed.png using Guid(1cb320f3457e51041a3cd2e09bfded49) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cf450731aca6b27cfa3917f3870672bf') in 0.0286215 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.248455 seconds.
+  path: Assets/Textures/UI/ItemIcons/Icon_EnergyYellow.png
+  artifactKey: Guid(2f0c63ea49d00854c99a409700c0b17d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/ItemIcons/Icon_EnergyYellow.png using Guid(2f0c63ea49d00854c99a409700c0b17d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c864e0e2c5299f1f0a541fc8eddc0195') in 0.0279707 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.064037 seconds.
+  path: Assets/Textures/UI/ItemIcons/Icon_ExampleRole.png
+  artifactKey: Guid(2aafa98f580ab864781880623a30b3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/ItemIcons/Icon_ExampleRole.png using Guid(2aafa98f580ab864781880623a30b3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c42ca6f376533ffc5578395ca81028a9') in 0.0259436 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.050787 seconds.
+  path: Assets/Textures/UI/SceneTextures/Icon_GiftChest1.png
+  artifactKey: Guid(c94b200347c83484e9a105c2bf4f06b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/SceneTextures/Icon_GiftChest1.png using Guid(c94b200347c83484e9a105c2bf4f06b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd7749f564b28d937ed449d70f147eeaf') in 0.0314615 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.279950 seconds.
+  path: Assets/Textures/UI/ItemIcons/Icon_Hand.png
+  artifactKey: Guid(8cf29a592a96e3042a7893d5d220d299) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/ItemIcons/Icon_Hand.png using Guid(8cf29a592a96e3042a7893d5d220d299) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e7f503a3f055422b5eecd7128d1ec401') in 0.0179523 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.061919 seconds.
+  path: Assets/Textures/UI/BasicIcons/Icon_Home.png
+  artifactKey: Guid(b5afbe1e8bb3367439b7257bef982836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/BasicIcons/Icon_Home.png using Guid(b5afbe1e8bb3367439b7257bef982836) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd38357aa7aa0b16adb150645b55fb798') in 0.0148554 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.302106 seconds.
+  path: Assets/Textures/UI/SceneTextures/Icon_KeyUnused.png
+  artifactKey: Guid(b3ba40d8d047818498d5c96395067025) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/SceneTextures/Icon_KeyUnused.png using Guid(b3ba40d8d047818498d5c96395067025) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'dd5a14602bc1eec199e9e0c1ee5a57f3') in 0.0172681 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.037786 seconds.
+  path: Assets/Textures/UI/ItemIcons/Icon_Levels.png
+  artifactKey: Guid(cefd0cf057cbebc4aa01c3ef128ef0d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/ItemIcons/Icon_Levels.png using Guid(cefd0cf057cbebc4aa01c3ef128ef0d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '76530e2e1920d4b31fdb0eca5bae3a1f') in 0.015695 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.028756 seconds.
+  path: Assets/Textures/UI/Components/Icon_life_Light.png
+  artifactKey: Guid(0bd573b96e1b79e439fab5880e9917b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Components/Icon_life_Light.png using Guid(0bd573b96e1b79e439fab5880e9917b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a676a73bb53031eeca347831d8e05e3a') in 0.0176362 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.026535 seconds.
+  path: Assets/Textures/UI/ItemIcons/Icon_Lock.png
+  artifactKey: Guid(35a5068a20d49604d99bb92baa167729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/ItemIcons/Icon_Lock.png using Guid(35a5068a20d49604d99bb92baa167729) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2c9a676ef810698c64cedd29ac4a0db4') in 0.0160079 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.701233 seconds.
+  path: Assets/Textures/UI/ItemIcons/Icon_LockOpen.png
+  artifactKey: Guid(23cfebe31d4708d4b89b75a017f058a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/ItemIcons/Icon_LockOpen.png using Guid(23cfebe31d4708d4b89b75a017f058a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a790b4e8172cf21f75b03b697635be74') in 0.0187148 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.054582 seconds.
+  path: Assets/Textures/UI/ItemIcons/Icon_Missions.png
+  artifactKey: Guid(4c09b1d73e7da0e4f9f27c2bcf6b2e8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/ItemIcons/Icon_Missions.png using Guid(4c09b1d73e7da0e4f9f27c2bcf6b2e8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cbe46b35e183630d37c42e64b3c55e01') in 0.0284948 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.018383 seconds.
+  path: Assets/Textures/UI/BasicIcons/Icon_Music.png
+  artifactKey: Guid(09a68190afd81a647b05129f935c634c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/BasicIcons/Icon_Music.png using Guid(09a68190afd81a647b05129f935c634c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '06b8b3886a7a0b14ebd3ab5180b2e73b') in 0.0190542 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.177538 seconds.
+  path: Assets/Textures/UI/BasicIcons/Icon_Next2.png
+  artifactKey: Guid(c0a83aea4321c77449d52afa139761b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/BasicIcons/Icon_Next2.png using Guid(c0a83aea4321c77449d52afa139761b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '042c8580ce85c00f089025f0ca8cc5aa') in 0.019902 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.077214 seconds.
+  path: Assets/Textures/UI/SceneTextures/Icon_Promotion.png
+  artifactKey: Guid(9371e12854f93ea45b7f74d171d81ba5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/SceneTextures/Icon_Promotion.png using Guid(9371e12854f93ea45b7f74d171d81ba5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5a4020f86ca07f5f24931939707decef') in 0.0213342 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.249391 seconds.
+  path: Assets/Textures/UI/ItemIcons/Icon_SalePurple.png
+  artifactKey: Guid(0294d609414022749afa8fe5d362834d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/ItemIcons/Icon_SalePurple.png using Guid(0294d609414022749afa8fe5d362834d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a3e3c5b7a16ec46e9b1a5064d645bcac') in 0.0183756 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002910 seconds.
+  path: Assets/Textures/UI/ItemIcons/Icon_SaleYellow.png
+  artifactKey: Guid(a0b3ce9928d970f4d98366a1302a07c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/ItemIcons/Icon_SaleYellow.png using Guid(a0b3ce9928d970f4d98366a1302a07c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7f18bad1a733acb4ef2a5f4af7dff66f') in 0.0193118 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.028696 seconds.
+  path: Assets/Textures/UI/ItemIcons/Icon_Second.png
+  artifactKey: Guid(b0d65da753f1f544989f1ec63bd239aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/ItemIcons/Icon_Second.png using Guid(b0d65da753f1f544989f1ec63bd239aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c33eb1be68b9ba443c5de40f12788f6d') in 0.0234949 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.028939 seconds.
+  path: Assets/Textures/UI/Components/Icon_SelectedGreen.png
+  artifactKey: Guid(ae26c9889e8eea4458dea581501b6471) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Components/Icon_SelectedGreen.png using Guid(ae26c9889e8eea4458dea581501b6471) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd74dd3051734ae6592167dc6252f845d') in 0.0233889 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.299196 seconds.
+  path: Assets/Textures/UI/Components/Icon_SelectedRed.png
+  artifactKey: Guid(e6913d025c875df449a40073a914f6c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Components/Icon_SelectedRed.png using Guid(e6913d025c875df449a40073a914f6c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1c0fd33a48d1fdad036324fd0f2c25a2') in 0.0173388 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004365 seconds.
+  path: Assets/Textures/UI/BasicIcons/Icon_Setting.png
+  artifactKey: Guid(57bb83c392c016a45b2ec1a6075e27db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/BasicIcons/Icon_Setting.png using Guid(57bb83c392c016a45b2ec1a6075e27db) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '70c8dfe3b9b1b26301e2ea7939999dea') in 0.0212445 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.053296 seconds.
+  path: Assets/Textures/UI/ItemIcons/Icon_ShieldBlue.png
+  artifactKey: Guid(cf813e20899db9e43b91e83ec29e844b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/ItemIcons/Icon_ShieldBlue.png using Guid(cf813e20899db9e43b91e83ec29e844b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0733c9e334adcd71e06cbd3c96132189') in 0.0182062 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004241 seconds.
+  path: Assets/Textures/UI/ItemIcons/Icon_ShieldRed.png
+  artifactKey: Guid(3209c91800260bb4c9dd3840ec369cb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/ItemIcons/Icon_ShieldRed.png using Guid(3209c91800260bb4c9dd3840ec369cb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '12cb80cbc30ecc8df42d3619d4a0c164') in 0.0180468 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.316464 seconds.
+  path: Assets/Textures/UI/BasicIcons/Icon_Shop.png
+  artifactKey: Guid(2aa4bd386d34f3740bd830ced0d71c92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/BasicIcons/Icon_Shop.png using Guid(2aa4bd386d34f3740bd830ced0d71c92) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '40f4c71c38630f89ba5b94789b1a04d6') in 0.0238439 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.080075 seconds.
+  path: Assets/Textures/UI/ItemIcons/Icon_Third.png
+  artifactKey: Guid(25cfa668ee809394eb88650405bd9f5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/ItemIcons/Icon_Third.png using Guid(25cfa668ee809394eb88650405bd9f5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '47290c95c412961767a18a6c56b4e326') in 0.0213506 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.848056 seconds.
+  path: Assets/Textures/UI/ItemIcons/Icon_TreasureChest2.png
+  artifactKey: Guid(04db9d5bf30d86b4aab9d009015a93a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/ItemIcons/Icon_TreasureChest2.png using Guid(04db9d5bf30d86b4aab9d009015a93a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '99d898de04d71d818a6afac32851b033') in 0.0205512 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.069900 seconds.
+  path: Assets/Textures/UI/BasicIcons/Icon_Volume.png
+  artifactKey: Guid(ef0449db887a45c4087e770ca38cb314) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/BasicIcons/Icon_Volume.png using Guid(ef0449db887a45c4087e770ca38cb314) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'eecd17c015a0b58fe7cb3db956b68f9e') in 0.0233647 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.365206 seconds.
+  path: Assets/Textures/UI/Buttons/IconButtons/IconBtn_Circle_Pink.png
+  artifactKey: Guid(f32eb7e6ecf7cb144970d35ef562f3fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/IconButtons/IconBtn_Circle_Pink.png using Guid(f32eb7e6ecf7cb144970d35ef562f3fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4522bf84f0e082939b0ea78ba6990d53') in 0.0157743 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003974 seconds.
+  path: Assets/Textures/UI/Buttons/IconButtons/IconBtn_Circle_Red.png
+  artifactKey: Guid(adf787269186c84448974fa2b38355cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/IconButtons/IconBtn_Circle_Red.png using Guid(adf787269186c84448974fa2b38355cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '17e40e7fcb17247153c243afca48ce5a') in 0.0182436 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.056570 seconds.
+  path: Assets/Textures/UI/Buttons/IconButtons/IconBtn_Circle_Yellow.png
+  artifactKey: Guid(73e115f50fde4e64fbdfe6a3566045ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/IconButtons/IconBtn_Circle_Yellow.png using Guid(73e115f50fde4e64fbdfe6a3566045ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e3ef2514925bb5376a0a7dcb84e5bbc5') in 0.0165986 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.159527 seconds.
+  path: Assets/Textures/UI/Buttons/IconButtons/IconBtn_Hexagon_Gray.png
+  artifactKey: Guid(4581eff67ccb37d4880042f85cf59745) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/IconButtons/IconBtn_Hexagon_Gray.png using Guid(4581eff67ccb37d4880042f85cf59745) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ab3d8acb00bc18a3b8124d193cc788ff') in 0.0165713 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.067683 seconds.
+  path: Assets/Textures/UI/Buttons/IconButtons/IconBtn_Hexagon_Pink.png
+  artifactKey: Guid(f35d399e34f8ba14d9941eb0d6e3f8c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/IconButtons/IconBtn_Hexagon_Pink.png using Guid(f35d399e34f8ba14d9941eb0d6e3f8c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0e106485ca54e6211faeeffbcafc963a') in 0.0164205 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.395337 seconds.
+  path: Assets/Textures/UI/Buttons/IconButtons/IconBtn_Hexagon_Red.png
+  artifactKey: Guid(665f60cd11cd0c74e884f7e266543570) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/IconButtons/IconBtn_Hexagon_Red.png using Guid(665f60cd11cd0c74e884f7e266543570) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7a6b181c6a6ec51fa805e6b25dff64c4') in 0.0207162 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.071280 seconds.
+  path: Assets/Textures/UI/Buttons/IconButtons/IconBtn_Hexagon_Yellow.png
+  artifactKey: Guid(d95e72db4832d714f8d7e3441d3c405d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/IconButtons/IconBtn_Hexagon_Yellow.png using Guid(d95e72db4832d714f8d7e3441d3c405d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6f15ccb2c896bcf9c10978b347ee1af4') in 0.0198868 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006800 seconds.
+  path: Assets/Textures/UI/Buttons/IconButtons/IconBtn_Pentagon_Gray.png
+  artifactKey: Guid(10a329b996b6a6c4ead8ae3dcca58530) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/IconButtons/IconBtn_Pentagon_Gray.png using Guid(10a329b996b6a6c4ead8ae3dcca58530) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ca18de854cdbc14508d315643720495d') in 0.0198373 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.377705 seconds.
+  path: Assets/Textures/UI/Buttons/IconButtons/IconBtn_Pentagon_Pink.png
+  artifactKey: Guid(a4598592c386e8747a63be109a0b3652) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/IconButtons/IconBtn_Pentagon_Pink.png using Guid(a4598592c386e8747a63be109a0b3652) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b6c48aa5e6a5c33d2a0c54b38deddf1e') in 0.0183295 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.008924 seconds.
+  path: Assets/Textures/UI/Buttons/IconButtons/IconBtn_Pentagon_Red.png
+  artifactKey: Guid(43316454c1ad72e40bce502ef98530e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/IconButtons/IconBtn_Pentagon_Red.png using Guid(43316454c1ad72e40bce502ef98530e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7f21fb6b0ea613d85e302e1471051853') in 0.0200435 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.056847 seconds.
+  path: Assets/Textures/UI/Buttons/IconButtons/IconBtn_Pentagon_Yellow.png
+  artifactKey: Guid(5442cf2d965d89146a43240fd825d179) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/IconButtons/IconBtn_Pentagon_Yellow.png using Guid(5442cf2d965d89146a43240fd825d179) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f5de96f563b606634c18aad3ab31724f') in 0.0231069 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.177549 seconds.
+  path: Assets/Textures/UI/Buttons/IconButtons/IconBtn_Rectangle_Gray.png
+  artifactKey: Guid(82570c4b8dca7094da5070b31c119a4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/IconButtons/IconBtn_Rectangle_Gray.png using Guid(82570c4b8dca7094da5070b31c119a4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5576c68f2b49277124f6628604135990') in 0.0204102 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.013939 seconds.
+  path: Assets/Textures/UI/Buttons/IconButtons/IconBtn_Rectangle_Pink.png
+  artifactKey: Guid(8f19db19ad8d6394ca868606c6fc35de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/IconButtons/IconBtn_Rectangle_Pink.png using Guid(8f19db19ad8d6394ca868606c6fc35de) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '95a9eaa7c9cee38f499f5ab5a4711ab4') in 0.0180432 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.028198 seconds.
+  path: Assets/Textures/UI/Buttons/IconButtons/IconBtn_Rectangle_Red.png
+  artifactKey: Guid(6ed7a18c033794246af6a6c8b07454d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/IconButtons/IconBtn_Rectangle_Red.png using Guid(6ed7a18c033794246af6a6c8b07454d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '010bca39ec55b6182ed0be484f3d6241') in 0.0205069 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.180566 seconds.
+  path: Assets/Textures/UI/Buttons/IconButtons/IconBtn_Rectangle_Yellow.png
+  artifactKey: Guid(1e05d2b3d99ffad45a2e394b9a3eb6d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/IconButtons/IconBtn_Rectangle_Yellow.png using Guid(1e05d2b3d99ffad45a2e394b9a3eb6d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a0065e45d59e95fa7a98b2de7b75ddb3') in 0.0161915 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006186 seconds.
+  path: Assets/Textures/UI/Components/ItemProgress_Bg.png
+  artifactKey: Guid(1bae7482dceef514192f40c96f31120a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Components/ItemProgress_Bg.png using Guid(1bae7482dceef514192f40c96f31120a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '46f99bd961e31b6b8798b688c4f71a37') in 0.0195899 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.029687 seconds.
+  path: Assets/Textures/UI/SceneTextures/LevelMap_Normal.png
+  artifactKey: Guid(cf48f4c3501ac8d4e9ce00878f3b291c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/SceneTextures/LevelMap_Normal.png using Guid(cf48f4c3501ac8d4e9ce00878f3b291c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '45fbe380488fbe28004afe79495b5197') in 0.0392363 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.018132 seconds.
+  path: Assets/Textures/UI/SceneTextures/LevelMapFrame.png
+  artifactKey: Guid(dea5dcf431afb6c4babea53142e8547e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/SceneTextures/LevelMapFrame.png using Guid(dea5dcf431afb6c4babea53142e8547e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '46df406fd1089af66f234cf0a7944452') in 0.0281644 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.027815 seconds.
+  path: Assets/Textures/UI/Components/LevelTitle1White.png
+  artifactKey: Guid(940bec3ea7c605d45ba8596fd0b8832b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Components/LevelTitle1White.png using Guid(940bec3ea7c605d45ba8596fd0b8832b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '83f52091ac9007266c91ab9379c9b25e') in 0.0262317 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.136978 seconds.
+  path: Assets/Textures/UI/Components/LevelTitle2White.png
+  artifactKey: Guid(db50f7725c39345438a8493ff9449861) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Components/LevelTitle2White.png using Guid(db50f7725c39345438a8493ff9449861) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '228936aa9660307860143a0d4a670d3a') in 0.0275242 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.059848 seconds.
+  path: Assets/Textures/UI/Buttons/MenuButtons/MenuBtn1_BlueLeft.png
+  artifactKey: Guid(e2ad3864c6810b34db3c9fe4be9f7e59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/UI/Buttons/MenuButtons/MenuBtn1_BlueLeft.png using Guid(e2ad3864c6810b34db3c9fe4be9f7e59) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4361617537bb6036da68e50c062f1e5d') in 0.0194765 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

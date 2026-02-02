@@ -5106,6 +5106,7 @@ MonoBehaviour:
   parent_transform: {fileID: 1210158846}
   transaction_prefab: {fileID: 442000305709554151, guid: 56c0a8f3f57857047845bbac4e05bbd6, type: 3}
   transaction_fullPanel: {fileID: 1326304481}
+  date_prefab: {fileID: 442000305709554151, guid: a7700a6ab49c6d149866d41850833304, type: 3}
   error_panel: {fileID: 274444983}
   error_txt: {fileID: 531496225}
 --- !u!4 &1026609330

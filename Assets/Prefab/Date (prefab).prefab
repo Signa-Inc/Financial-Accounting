@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6979753486392299295}
   - component: {fileID: 6693589031325625368}
   - component: {fileID: 886848260963241130}
+  - component: {fileID: 218546323861401656}
   m_Layer: 5
   m_Name: Date (prefab)
   m_TagString: Untagged
@@ -76,6 +77,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &218546323861401656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442000305709554151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7853a26a1d1f0b458501a5aba5fec3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  label: {fileID: 5012245813226938606}
 --- !u!1 &7229424832977707930
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,7 +182,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 18
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

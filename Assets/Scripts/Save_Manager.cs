@@ -1,4 +1,4 @@
-using Newtonsoft.Json;
+п»їusing Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -6,9 +6,19 @@ using UnityEngine;
 
 public class Save_Manager : MonoBehaviour
 {
-    public static List<Payment> payments;
+    public static Saves saves = new();
 
-    void Awake() => InitPayments();
+    public static List<Payment> payments;
+    public static List<Payment> dailyPayments;
+
+    void Awake() => Init();
+
+    public static void Init()
+    {
+        dailyPayments = GetDailyPayments();
+        InitPayments();
+        InitSaves(); // Р—Р°РєРѕРЅС‡РёС‚СЊ! РЎРґРµР»Р°С‚СЊ С‚Р°Рє С‡С‚РѕР±С‹ Saves СЃРѕС…СЂР°РЅСЏР» Р±Р°Р»Р°РЅСЃ, Last Daily Payment
+    }
 
     public static void SetBalance(float balance) => PlayerPrefs.SetFloat("Balance", PlayerPrefs.GetFloat("Balance", 0f) + balance);
 
@@ -37,6 +47,8 @@ public class Save_Manager : MonoBehaviour
         if (!File.Exists(path)) return payments;
 
         var lines = File.ReadAllLines(path);
+        int idCount = 0; // РќСѓР¶РµРЅ РґР»СЏ С‚РѕРіРѕ С‡С‚РѕР±С‹ РїСЂРѕРІРµСЂСЏС‚СЊ С‡С‚Рѕ РЅРµС‚Сѓ РїСЂРѕРїСѓС‰РµРЅРЅС‹С… id
+
         foreach (string line in lines)
         {
             if (!string.IsNullOrWhiteSpace(line))
@@ -44,11 +56,16 @@ public class Save_Manager : MonoBehaviour
                 try
                 {
                     Payment p = JsonConvert.DeserializeObject<Payment>(line);
+
+                    if (p.id != idCount)
+                        p.id = idCount;
+
+                    idCount++;
                     payments.Add(p);
                 }
                 catch (JsonException ex)
                 {
-                    Debug.LogError("Ошибка десериализации строки: " + ex.Message);
+                    Debug.LogError("РћС€РёР±РєР° РґРµСЃРµСЂРёР°Р»РёР·Р°С†РёРё СЃС‚СЂРѕРєРё: " + ex.Message);
                 }
             }
         }
@@ -58,7 +75,7 @@ public class Save_Manager : MonoBehaviour
 
     public static void RemovePayment(int paymentId)
     {
-        // Находим покупку для удаления
+        // РќР°С…РѕРґРёРј РїРѕРєСѓРїРєСѓ РґР»СЏ СѓРґР°Р»РµРЅРёСЏ
         Payment paymentToRemove = payments.Find(p => p.id == paymentId);
 
         if (paymentToRemove == null)
@@ -69,17 +86,17 @@ public class Save_Manager : MonoBehaviour
 
         try
         {
-            // Корректируем баланс (обратная операция)
+            // РљРѕСЂСЂРµРєС‚РёСЂСѓРµРј Р±Р°Р»Р°РЅСЃ (РѕР±СЂР°С‚РЅР°СЏ РѕРїРµСЂР°С†РёСЏ)
             float amount = float.Parse(paymentToRemove.price);
             SetBalance(paymentToRemove.isRevenue ? -amount : amount);
 
-            // Удаляем покупку из списка
+            // РЈРґР°Р»СЏРµРј РїРѕРєСѓРїРєСѓ РёР· СЃРїРёСЃРєР°
             payments.Remove(payments[paymentId]);
 
-            // Перезаписываем весь файл с обновленными данными
+            // РџРµСЂРµР·Р°РїРёСЃС‹РІР°РµРј РІРµСЃСЊ С„Р°Р№Р» СЃ РѕР±РЅРѕРІР»РµРЅРЅС‹РјРё РґР°РЅРЅС‹РјРё
             string path = Application.persistentDataPath + "/payments.json";
 
-            // Создаем временный файл для записи
+            // РЎРѕР·РґР°РµРј РІСЂРµРјРµРЅРЅС‹Р№ С„Р°Р№Р» РґР»СЏ Р·Р°РїРёСЃРё
             string tempPath = path + ".tmp";
 
             using (StreamWriter writer = new StreamWriter(tempPath))
@@ -91,15 +108,15 @@ public class Save_Manager : MonoBehaviour
                 }
             }
 
-            // Заменяем оригинальный файл временным
+            // Р—Р°РјРµРЅСЏРµРј РѕСЂРёРіРёРЅР°Р»СЊРЅС‹Р№ С„Р°Р№Р» РІСЂРµРјРµРЅРЅС‹Рј
             if (File.Exists(path))
                 File.Delete(path);
             File.Move(tempPath, path);
 
-            // Инициализируем payments снова, во избежание ошибок отображения списка на главном экране
+            // РРЅРёС†РёР°Р»РёР·РёСЂСѓРµРј payments СЃРЅРѕРІР°, РІРѕ РёР·Р±РµР¶Р°РЅРёРµ РѕС€РёР±РѕРє РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ СЃРїРёСЃРєР° РЅР° РіР»Р°РІРЅРѕРј СЌРєСЂР°РЅРµ
             InitPayments();
 
-            // Обновляем UI
+            // РћР±РЅРѕРІР»СЏРµРј UI
             Main_Manager.instance.UpdateBalance();
             Main_Manager.instance.UpdatePayments();
 
@@ -108,14 +125,142 @@ public class Save_Manager : MonoBehaviour
         catch (Exception ex)
         {
             Debug.LogError($"Error removing payment: {ex.Message}");
-            Debug.LogError($"Problematic price value: '{paymentToRemove.price}'");
 
-            // Восстанавливаем список платежей в случае ошибки
+            // Р’РѕСЃСЃС‚Р°РЅР°РІР»РёРІР°РµРј СЃРїРёСЃРѕРє РїР»Р°С‚РµР¶РµР№ РІ СЃР»СѓС‡Р°Рµ РѕС€РёР±РєРё
             InitPayments();
         }
     }
 
-    public static int InitUnicId() { return payments.Count == 0 ? 0 : payments[payments.Count - 1].id + 1; }
+    public static void SetDailyPayment(Payment payment)
+    {
+        payment.id = InitDailyUnicId();
+        payment.date = "";
 
-    public static List<Payment> InitPayments() => payments = GetPayment();
+        string path = Application.persistentDataPath + "/daily_payments.json";
+        string jsonLine = JsonConvert.SerializeObject(payment);
+        File.AppendAllText(path, jsonLine + "\n");
+
+        dailyPayments.Add(payment);
+    }
+
+    public static List<Payment> GetDailyPayments()
+    {
+        string path = Application.persistentDataPath + "/daily_payments.json";
+        List<Payment> payments = new List<Payment>();
+
+        if (!File.Exists(path)) return payments;
+
+        var lines = File.ReadAllLines(path);
+        int idCount = 0;
+
+        foreach (string line in lines)
+        {
+            if (!string.IsNullOrWhiteSpace(line))
+            {
+                try
+                {
+                    Payment p = JsonConvert.DeserializeObject<Payment>(line);
+
+                    if (p.id != idCount)
+                        p.id = idCount;
+
+                    idCount++;
+                    payments.Add(p);
+                }
+                catch (JsonException ex)
+                {
+                    Debug.LogError("РћС€РёР±РєР° РґРµСЃРµСЂРёР°Р»РёР·Р°С†РёРё СЃС‚СЂРѕРєРё: " + ex.Message);
+                }
+            }
+        }
+
+        return payments;
+    }
+
+
+
+    //public static void RemoveDailyPayment(int paymentId)
+    //{
+    //    // РќР°С…РѕРґРёРј РїРѕРєСѓРїРєСѓ РґР»СЏ СѓРґР°Р»РµРЅРёСЏ
+    //    Payment paymentToRemove = GetDailyPayments().Find(p => p.id == paymentId);
+
+    //    if (paymentToRemove == null)
+    //    {
+    //        Debug.LogWarning($"Payment with ID {paymentId} not found");
+    //        return;
+    //    }
+
+    //    try
+    //    {
+    //        GetDailyPayments().Remove(GetDailyPayments()[paymentId]);
+
+    //        // РџРµСЂРµР·Р°РїРёСЃС‹РІР°РµРј РІРµСЃСЊ С„Р°Р№Р» СЃ РѕР±РЅРѕРІР»РµРЅРЅС‹РјРё РґР°РЅРЅС‹РјРё
+    //        string path = Application.persistentDataPath + "/daily_payments.json";
+
+    //        // РЎРѕР·РґР°РµРј РІСЂРµРјРµРЅРЅС‹Р№ С„Р°Р№Р» РґР»СЏ Р·Р°РїРёСЃРё
+    //        string tempPath = path + ".tmp";
+
+    //        using (StreamWriter writer = new StreamWriter(tempPath))
+    //        {
+    //            foreach (var payment in GetDailyPayments())
+    //            {
+    //                string jsonLine = JsonConvert.SerializeObject(payment);
+    //                writer.WriteLine(jsonLine);
+    //            }
+    //        }
+
+    //        // Р—Р°РјРµРЅСЏРµРј РѕСЂРёРіРёРЅР°Р»СЊРЅС‹Р№ С„Р°Р№Р» РІСЂРµРјРµРЅРЅС‹Рј
+    //        if (File.Exists(path))
+    //            File.Delete(path);
+    //        File.Move(tempPath, path);
+
+    //        Debug.Log($"Payment with ID {paymentId} successfully removed");
+    //    }
+    //    catch (Exception ex)
+    //    {
+    //        Debug.LogError($"Error removing payment: {ex.Message}");
+    //    }
+    //}
+
+    public static int InitUnicId() { return payments.Count == 0 ? 0 : payments[payments.Count - 1].id + 1; }
+    public static int InitDailyUnicId() { return dailyPayments.Count == 0 ? 0 : dailyPayments[dailyPayments.Count - 1].id + 1; }
+
+    private static void InitPayments()
+    {
+        payments = GetPayment();
+
+        if (PlayerPrefs.GetString("Last Daily Payment") != DateTime.Today.ToString("yyyy-MM-dd"))
+        {
+            foreach (Payment p in dailyPayments)
+            {
+                Payment paymentToAdd = new Payment
+                {
+                    id = payments.Count,
+                    label = p.label,
+                    price = p.price,
+                    description = p.description,
+                    isRevenue = p.isRevenue,
+                    typePurchase = p.typePurchase,
+                    date = DateTime.Today.ToString("dd.MM.yyyy")
+                };
+                SetPayment(paymentToAdd);
+            }
+
+            PlayerPrefs.SetString("Last Daily Payment", DateTime.Today.ToString("yyyy-MM-dd"));
+        }
+
+        Main_Manager.instance.UpdatePayments();
+    }
+
+    public static void InitSaves()
+    {
+
+    }
+}
+
+
+public class Saves
+{
+    public int money;
+    public DateTime lastDailyPayment;
 }

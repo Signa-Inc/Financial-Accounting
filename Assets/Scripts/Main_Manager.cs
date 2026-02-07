@@ -1,4 +1,4 @@
-using NUnit.Framework.Constraints;
+п»їusing NUnit.Framework.Constraints;
 using System;
 using System.Collections.Generic;
 using TMPro;
@@ -25,34 +25,33 @@ public class Main_Manager : MonoBehaviour
     [HideInInspector, Header("Init Payments")]
     private List<Payment> payments;
     private Transaction trans;
-    private List<string> dates = new(); // В 0 индексе самая старая дата
-    private Dictionary<string, List<int>> payment_dic = new();
+    private List<string> dates; // Р’ 0 РёРЅРґРµРєСЃРµ СЃР°РјР°СЏ СЃС‚Р°СЂР°СЏ РґР°С‚Р°
+    private Dictionary<string, List<int>> payment_dic;
 
     void Awake() => instance = this;
 
     void Start()
     {
         UpdateBalance();
-        UpdatePayments();
-    }
-
-    void Update()
-    {
-
     }
 
     public void UpdateBalance() => balance_txt.text = $"Balance: {Save_Manager.GetBalance()}";
 
     public void UpdatePayments()
     {
-        // Удаляем старые платежи
+        // РЈРґР°Р»СЏРµРј СЃС‚Р°СЂС‹Рµ РїР»Р°С‚РµР¶Рё Рё РѕС‡РёС‰Р°РµРј РїРµСЂРµРјРµРЅРЅС‹Рµ
         for (int i = parent_transform.childCount - 1; i >= 0; i--)
             Destroy(parent_transform.GetChild(i).gameObject);
 
-        SetNewPaymentSizeInContent(true, parent_transform.childCount + dates.Count * 148.3f); // Cчитаем сколько всего объектов и умножаем на их высоту (148.3)
+        payments = new List<Payment>();
+        trans = new Transaction();
+        dates = new List<string>();
+        payment_dic = new Dictionary<string, List<int>>();
 
-        // Узнаем сколько всего у нас есть дат
-        payments = Save_Manager.payments; // Потом будем присваивать транзакции который были совершены за последние 30 дней 
+        SetNewPaymentSizeInContent(true); // РћС‡РёС‰Р°РµРј content С‡С‚РѕР±С‹ РѕРЅ РЅРµ Р±С‹Р» СЃР»РёС€РєРѕРј РґР»РёРЅРЅС‹Рј
+
+        // РЈР·РЅР°РµРј СЃРєРѕР»СЊРєРѕ РІСЃРµРіРѕ Сѓ РЅР°СЃ РµСЃС‚СЊ РґР°С‚
+        payments = Save_Manager.payments; // РџРѕС‚РѕРј Р±СѓРґРµРј РїСЂРёСЃРІР°РёРІР°С‚СЊ С‚СЂР°РЅР·Р°РєС†РёРё РєРѕС‚РѕСЂС‹Р№ Р±С‹Р»Рё СЃРѕРІРµСЂС€РµРЅС‹ Р·Р° РїРѕСЃР»РµРґРЅРёРµ 30 РґРЅРµР№ 
 
         foreach(Payment payment in payments)
         {
@@ -62,10 +61,10 @@ public class Main_Manager : MonoBehaviour
             }
         }
 
-        // Сортируем список по дате (от новой к старой)
+        // РЎРѕСЂС‚РёСЂСѓРµРј СЃРїРёСЃРѕРє РїРѕ РґР°С‚Рµ (РѕС‚ РЅРѕРІРѕР№ Рє СЃС‚Р°СЂРѕР№)
         dates.Sort();
 
-        // Заполняем словарь
+        // Р—Р°РїРѕР»РЅСЏРµРј СЃР»РѕРІР°СЂСЊ
         foreach (string date in dates)
         {
             List<int> ids = new List<int>();
@@ -76,25 +75,58 @@ public class Main_Manager : MonoBehaviour
 
             payment_dic.Add(date, ids);
 
-            //for (int i = 0; i < payment_dic[date].Count; i++)
-            //    print($"Key = {date}, value = {payment_dic[date][i]}");
+            for (int i = 0; i < payment_dic[date].Count; i++)
+                print($"Key = {date}, value = {payment_dic[date][i]}");
         }
 
-        // Создаем префабы дат и транзакций
+        // РЎРѕР·РґР°РµРј РїСЂРµС„Р°Р±С‹ РґР°С‚ Рё С‚СЂР°РЅР·Р°РєС†РёР№
         for(int j = 0; j < payment_dic.Count; j++)
         {
-            Instantiate(date_prefab, parent_transform).GetComponent<Date_Prefab>().label.text = dates[j]; // Устанавливаем дату
+            Date_Prefab df = Instantiate(date_prefab, parent_transform).GetComponent<Date_Prefab>(); // РЎРїР°РІРЅРёРј Р±Р»РѕРє СЃ РґР°С‚РѕР№
+            df.label_txt.text = dates[j];
+
+            float minus = 0;
+            float plus = 0;
+            float equal = 0;
 
             foreach (int item in payment_dic[dates[j]])
             {
-                trans = Instantiate(transaction_prefab, parent_transform).GetComponent<Transaction>();
+                try
+                {
+                    trans = Instantiate(transaction_prefab, parent_transform).GetComponent<Transaction>();
 
-                trans.id = payments[item].id;
-                trans.label_txt.text = payments[item].label;
-                trans.price_txt.text = payments[item].price;
+                    trans.id = payments[item].id;
+                    trans.label_txt.text = payments[item].label;
+                    trans.price_txt.text = payments[item].price;
 
-                SetNewPaymentSizeInContent();
+                    SetNewPaymentSizeInContent();
+
+                    float price = float.Parse(payments[item].price);
+                    bool isRevenue = payments[item].isRevenue;
+
+                    if (isRevenue)
+                        plus += price;
+                    else
+                        minus += price;
+                }
+                catch (Exception ex)
+                {
+                    Debug.Log("Id = " + payments[item-1].id);
+                    Debug.Log("Error: " + ex);
+                }
             }
+            equal = plus - minus;
+
+            df.minus_txt.text = $"{minus}";
+            df.plus_txt.text = $"{plus}";
+            df.equal_txt.text = $"{equal}";
+
+            if (equal > 0)
+                df.equal_txt.color = Color.green;
+            else if (equal < 0)
+                df.equal_txt.color = Color.red;
+            else
+                df.equal_txt.color = Color.white;
         }
     }
 
@@ -104,6 +136,6 @@ public class Main_Manager : MonoBehaviour
         error_txt.text = error;
     }
 
-    public void SetNewPaymentSizeInContent(bool isClear = false, float numToRemove = 0f) => parent_transform.sizeDelta = new Vector2(parent_transform.sizeDelta.x, isClear? parent_transform.sizeDelta.y - numToRemove : parent_transform.sizeDelta.y + 148.3f);
-    // isClear равен true, когда мы хотим очистить наш ScrollBar, а numToRemove показывает насколько его нужно очистить
+    public void SetNewPaymentSizeInContent(bool isClear = false) => parent_transform.sizeDelta = new Vector2(parent_transform.sizeDelta.x, isClear? (parent_transform.sizeDelta.y * 0) + 20 : parent_transform.sizeDelta.y + 148.3f);
+    // isClear СЂР°РІРµРЅ true, РєРѕРіРґР° РјС‹ С…РѕС‚РёРј РѕС‡РёСЃС‚РёС‚СЊ РЅР°С€ ScrollBar (Content). 148,3f = РІС‹СЃРѕС‚Р° Р±Р»РѕРєР° СЃ С‚СЂР°РЅР·Р°РєС†РёСЏРјРё, Р° 20 = РЅР°С‡Р°Р»СЊРЅРѕРјСѓ СЂР°Р·РјРµСЂСѓ ScrollBar (Content)
 }

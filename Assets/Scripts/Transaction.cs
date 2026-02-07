@@ -18,6 +18,8 @@ public class Transaction : MonoBehaviour
     public TextMeshProUGUI typePurchase_text;
     public TextMeshProUGUI isRevenue_text;
 
+    public Payment lastPayment;
+
     public void OpenFullPanel()
     {
         Main_Manager.instance.transaction_fullPanel.SetActive(true);
@@ -34,10 +36,17 @@ public class Transaction : MonoBehaviour
         payment.date_text.text = payments[id].date;
         payment.typePurchase_text.text = payments[id].typePurchase.ToString();
         payment.price_txt.text = payments[id].price;
+        
+        payment.lastPayment = payments[id];
     }
 
     public void RemovePayment()
     {
         Save_Manager.RemovePayment(id);
+    }
+
+    public void RemoveFromDailyPayments()
+    {
+        //Save_Manager.RemoveDailyPayment(id);
     }
 }

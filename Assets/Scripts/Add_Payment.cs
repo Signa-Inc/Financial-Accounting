@@ -14,16 +14,12 @@ public class Add_Payment : MonoBehaviour
     [SerializeField] Toggle isRevenue_tgl;
     [SerializeField] TMP_InputField price_if;
 
+    Payment lastPayment;
+
     void Start()
     {
         // Ќастраиваем чтобы при старте игры сразу пов€лавл€лась текуща€ дата
         date_if.text = DateTime.Now.ToString("dd.MM.yyyy");
-
-        // «десь мы можем сделаем так чтобы по клику на поле ввода по€вл€лась дата
-        //var trigger = date_if.gameObject.AddComponent<EventTrigger>();
-        //var entry = new EventTrigger.Entry { eventID = EventTriggerType.PointerClick };
-        //entry.callback.AddListener(data => date_if.text = DateTime.Now.ToString("dd.MM.yyyy"));
-        //trigger.triggers.Add(entry);
 
         // «аполн€ем выпадающий список типами покупок
         List<string> allTypesOfPayment = new List<string>();
@@ -54,6 +50,8 @@ public class Add_Payment : MonoBehaviour
             price = price_if.text
         };
 
+        lastPayment = newPayment;
+
         Transaction trans = Instantiate(Main_Manager.instance.transaction_prefab, Main_Manager.instance.parent_transform).GetComponent<Transaction>();
 
         trans.id = Save_Manager.InitUnicId();
@@ -61,6 +59,12 @@ public class Add_Payment : MonoBehaviour
         trans.price_txt.text = newPayment.price;
 
         Save_Manager.SetPayment(newPayment);
-        Main_Manager.instance.SetNewPaymentSizeInContent();
+        Main_Manager.instance.UpdatePayments();
+    }
+
+    public void AddToDailyPayments()
+    {
+        PaymentComplete();
+        Save_Manager.SetDailyPayment(lastPayment);
     }
 }

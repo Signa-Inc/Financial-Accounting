@@ -1,18 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\Programming Games\\Financial-Accounting\\",
+  "WorkspaceRootPath": "C:\\Unity Projects\\Financial-Accounting\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6F6FA1AD-F987-8AD5-F735-170A582FB63D}|Assembly-CSharp.csproj|f:\\programming games\\financial-accounting\\assets\\scripts\\save_manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6F6FA1AD-F987-8AD5-F735-170A582FB63D}|Assembly-CSharp.csproj|c:\\unity projects\\financial-accounting\\assets\\scripts\\main_manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F6FA1AD-F987-8AD5-F735-170A582FB63D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\main_manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F6FA1AD-F987-8AD5-F735-170A582FB63D}|Assembly-CSharp.csproj|c:\\unity projects\\financial-accounting\\assets\\scripts\\save_manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F6FA1AD-F987-8AD5-F735-170A582FB63D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\save_manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F6FA1AD-F987-8AD5-F735-170A582FB63D}|Assembly-CSharp.csproj|f:\\programming games\\financial-accounting\\assets\\scripts\\add_payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6F6FA1AD-F987-8AD5-F735-170A582FB63D}|Assembly-CSharp.csproj|C:\\Unity Projects\\Financial-Accounting\\assets\\scripts\\add_payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F6FA1AD-F987-8AD5-F735-170A582FB63D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\add_payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F6FA1AD-F987-8AD5-F735-170A582FB63D}|Assembly-CSharp.csproj|f:\\programming games\\financial-accounting\\assets\\scripts\\main_manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F6FA1AD-F987-8AD5-F735-170A582FB63D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\main_manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6F6FA1AD-F987-8AD5-F735-170A582FB63D}|Assembly-CSharp.csproj|C:\\Unity Projects\\Financial-Accounting\\assets\\scripts\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F6FA1AD-F987-8AD5-F735-170A582FB63D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,50 +26,61 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Save_Manager.cs",
+              "DocumentMoniker": "C:\\Unity Projects\\Financial-Accounting\\Assets\\Scripts\\Save_Manager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Save_Manager.cs",
+              "ToolTip": "C:\\Unity Projects\\Financial-Accounting\\Assets\\Scripts\\Save_Manager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Save_Manager.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAuwAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T16:52:06.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Main_Manager.cs",
+              "DocumentMoniker": "C:\\Unity Projects\\Financial-Accounting\\Assets\\Scripts\\Main_Manager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Main_Manager.cs",
+              "ToolTip": "C:\\Unity Projects\\Financial-Accounting\\Assets\\Scripts\\Main_Manager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Main_Manager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T18:32:44.038Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Main_Manager.cs",
-              "DocumentMoniker": "F:\\Programming Games\\Financial-Accounting\\Assets\\Scripts\\Main_Manager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Main_Manager.cs",
-              "ToolTip": "F:\\Programming Games\\Financial-Accounting\\Assets\\Scripts\\Main_Manager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Main_Manager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Transaction.cs",
+              "DocumentMoniker": "C:\\Unity Projects\\Financial-Accounting\\Assets\\Scripts\\Transaction.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Transaction.cs",
+              "ToolTip": "C:\\Unity Projects\\Financial-Accounting\\Assets\\Scripts\\Transaction.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Transaction.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwDEAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-05T16:52:07.204Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-05T17:11:37.828Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Add_Payment.cs",
-              "DocumentMoniker": "F:\\Programming Games\\Financial-Accounting\\Assets\\Scripts\\Add_Payment.cs",
+              "DocumentMoniker": "C:\\Unity Projects\\Financial-Accounting\\Assets\\Scripts\\Add_Payment.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Add_Payment.cs",
-              "ToolTip": "F:\\Programming Games\\Financial-Accounting\\Assets\\Scripts\\Add_Payment.cs",
+              "ToolTip": "C:\\Unity Projects\\Financial-Accounting\\Assets\\Scripts\\Add_Payment.cs",
               "RelativeToolTip": "Assets\\Scripts\\Add_Payment.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-05T16:52:03.121Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Save_Manager.cs",
-              "DocumentMoniker": "F:\\Programming Games\\Financial-Accounting\\Assets\\Scripts\\Save_Manager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Save_Manager.cs",
-              "ToolTip": "F:\\Programming Games\\Financial-Accounting\\Assets\\Scripts\\Save_Manager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Save_Manager.cs",
-              "ViewState": "AgIAAMYAAAAAAAAAAAAYwN0AAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-05T16:52:06.211Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-05T16:52:03.121Z"
             }
           ]
         }

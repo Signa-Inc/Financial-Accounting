@@ -229,7 +229,7 @@ public class Save_Manager : MonoBehaviour
     {
         payments = GetPayment();
 
-        if (PlayerPrefs.GetString("Last Daily Payment") != DateTime.Today.ToString("yyyy-MM-dd"))
+        if (PlayerPrefs.GetString("Last Daily Payment") != DateTime.Today.ToString("dd.MM.yyyy"))
         {
             foreach (Payment p in dailyPayments)
             {
@@ -246,7 +246,7 @@ public class Save_Manager : MonoBehaviour
                 SetPayment(paymentToAdd);
             }
 
-            PlayerPrefs.SetString("Last Daily Payment", DateTime.Today.ToString("yyyy-MM-dd"));
+            PlayerPrefs.SetString("Last Daily Payment", DateTime.Today.ToString("dd.MM.yyyy"));
         }
 
         Main_Manager.instance.UpdatePayments();

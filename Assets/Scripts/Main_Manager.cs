@@ -8,7 +8,6 @@ public class Main_Manager : MonoBehaviour
 {
     public static Main_Manager instance;
 
-
     [Header("Balance")]
     [SerializeField] TextMeshProUGUI balance_txt;
 

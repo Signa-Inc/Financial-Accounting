@@ -30,13 +30,21 @@ public class Add_Payment : MonoBehaviour
         type_dd.AddOptions(allTypesOfPayment);
     }
 
-    public void PaymentComplete()
+    public void PaymentComplete(bool isDailyPayment = false) // Передаём true в том случае если платёж должен быть ежедневным 
     {
+        if(isDailyPayment){
+            foreach (Payment p in Save_Manager.payments)
+                if (label_if.text == p.label && p.isDailyPayment){
+                    Main_Manager.instance.Error("Ежедневный платёж с таким именем уже существует, пожалуйста переименуйте его");
+                    return;
+                }
+        }
+
         //Переводим дату в формат ДД.ММ.ГГГГ
         DateTime parsedDate = DateTime.Parse(date_if.text);
 
         if(parsedDate > DateTime.Today){
-            Main_Manager.instance.Error("Вы указали дату котороя ещё не наступала");
+            Main_Manager.instance.Error("Вы указали дату которая ещё не наступала");
             return;
         }
 
@@ -47,7 +55,8 @@ public class Add_Payment : MonoBehaviour
             typePurchase = (TypePurchases)Enum.Parse(typeof(TypePurchases), type_dd.options[type_dd.value].text),
             date = parsedDate.ToString("dd.MM.yyyy"),
             isRevenue = isRevenue_tgl.isOn,
-            price = price_if.text
+            price = price_if.text,
+            isDailyPayment = isDailyPayment,
         };
 
         lastPayment = newPayment;
@@ -60,11 +69,7 @@ public class Add_Payment : MonoBehaviour
 
         Save_Manager.SetPayment(newPayment);
         Main_Manager.instance.UpdatePayments();
-    }
 
-    public void AddToDailyPayments()
-    {
-        PaymentComplete();
-        Save_Manager.SetDailyPayment(lastPayment);
+        gameObject.SetActive(false);
     }
 }

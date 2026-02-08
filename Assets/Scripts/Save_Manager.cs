@@ -48,6 +48,7 @@ public class Save_Manager : MonoBehaviour
 
         var lines = File.ReadAllLines(path);
         int idCount = 0; // Нужен для того чтобы проверять что нету пропущенных id
+        bool isIdBeenChanged = false; // Нужен для проверки, был ли хоть раз изменён ID чтобы взять и перезаписать в файл новые значения, чтобы он каждый запуск их не переприсваивал
 
         foreach (string line in lines)
         {
@@ -57,11 +58,15 @@ public class Save_Manager : MonoBehaviour
                 {
                     Payment p = JsonConvert.DeserializeObject<Payment>(line);
 
-                    if (p.id != idCount)
+                    if (p.id != idCount){
                         p.id = idCount;
 
+                        if (!isIdBeenChanged)
+                            isIdBeenChanged = true;
+                    }
+
                     idCount++;
-                    payments.Add(p);
+                    payments.Add(p); // ТУТ МЫ ДОЛЖНЫ СДЕЛАТЬ ТАК ЧТОБЫ ЕСЛИ У НАС ID ПОМЕНЯЛСЯ, ТО ЭТА СТРОКА СРАЗУ ЖЕ БЫ УДАЛАЛЯЛСЬ ИЗ PAYMENTS.JSON И ВСТАВЛЯЛАСЬ ОБНОВЛЁННАЯ
                 }
                 catch (JsonException ex)
                 {
@@ -69,6 +74,12 @@ public class Save_Manager : MonoBehaviour
                 }
             }
         }
+
+        //if(isIdBeenChanged)
+        //{
+        //    string jsonLine = JsonConvert.SerializeObject(payment);
+        //    File.AppendAllText(path, jsonLine + "\n");
+        //}
 
         return payments;
     }
@@ -131,27 +142,16 @@ public class Save_Manager : MonoBehaviour
         }
     }
 
-    public static void SetDailyPayment(Payment payment)
-    {
-        payment.id = InitDailyUnicId();
-        payment.date = "";
-
-        string path = Application.persistentDataPath + "/daily_payments.json";
-        string jsonLine = JsonConvert.SerializeObject(payment);
-        File.AppendAllText(path, jsonLine + "\n");
-
-        dailyPayments.Add(payment);
-    }
-
     public static List<Payment> GetDailyPayments()
     {
-        string path = Application.persistentDataPath + "/daily_payments.json";
+        string path = Application.persistentDataPath + "/payments.json";
         List<Payment> payments = new List<Payment>();
 
         if (!File.Exists(path)) return payments;
 
         var lines = File.ReadAllLines(path);
-        int idCount = 0;
+        bool isFindedCopy = false;
+        //int idCount = 0;
 
         foreach (string line in lines)
         {
@@ -161,10 +161,25 @@ public class Save_Manager : MonoBehaviour
                 {
                     Payment p = JsonConvert.DeserializeObject<Payment>(line);
 
-                    if (p.id != idCount)
-                        p.id = idCount;
+                    // Проверка, действительно ли этот платёж должен обрабатываться ежедневно?
+                    if (!p.isDailyPayment)
+                        continue;
 
-                    idCount++;
+                    // Проверка, на копию уже существующего ежедневного платежа во избежание ошибки что ежедневных платежей с каждым днём становится больше в геометрической прогресии
+                    if (payments.Count != 0)
+                        foreach (var payment in payments)
+                            if (p.label == payment.label)
+                                isFindedCopy = true;
+
+                    // Проверка, найдена ли копия? Почему мы это не сделали в предыдушем условии, потому что он выходил из цикла только в том условии, а не из основного цикла 
+                    if (isFindedCopy)
+                        continue;
+
+                    // Присваиваем правильный id, нужен для того чтобы не было пустых id при удалении платежа из списка
+                    //if (p.id != idCount)
+                    //    p.id = idCount;
+
+                    //idCount++;
                     payments.Add(p);
                 }
                 catch (JsonException ex)
@@ -176,58 +191,64 @@ public class Save_Manager : MonoBehaviour
 
         return payments;
     }
+    public static void RemoveDailyPayment(int paymentId)
+    {
+        // Находим покупку для удаления
+        Payment paymentToRemove = payments.Find(p => p.id == paymentId);
 
+        if (paymentToRemove == null)
+        {
+            Debug.LogWarning($"Payment with ID {paymentId} not found");
+            return;
+        }
 
+        try
+        {
+            // Для начала мы снимаем флаг у той транзакции, которую мы точно знаем
+            payments[paymentId].isDailyPayment = false;
 
-    //public static void RemoveDailyPayment(int paymentId)
-    //{
-    //    // Находим покупку для удаления
-    //    Payment paymentToRemove = GetDailyPayments().Find(p => p.id == paymentId);
+            // А здесь мы снимаем этот флаг у всех транзакций с таким же label (названием)
+            foreach (Payment p in payments)
+                if(payments[paymentId].label == p.label)
+                    p.isDailyPayment = false;
 
-    //    if (paymentToRemove == null)
-    //    {
-    //        Debug.LogWarning($"Payment with ID {paymentId} not found");
-    //        return;
-    //    }
+            // Перезаписываем весь файл с обновленными данными
+            string path = Application.persistentDataPath + "/payments.json";
 
-    //    try
-    //    {
-    //        GetDailyPayments().Remove(GetDailyPayments()[paymentId]);
+            // Создаем временный файл для записи
+            string tempPath = path + ".tmp";
 
-    //        // Перезаписываем весь файл с обновленными данными
-    //        string path = Application.persistentDataPath + "/daily_payments.json";
+            using (StreamWriter writer = new StreamWriter(tempPath))
+            {
+                foreach (var payment in payments)
+                {
+                    string jsonLine = JsonConvert.SerializeObject(payment);
+                    writer.WriteLine(jsonLine);
+                }
+            }
 
-    //        // Создаем временный файл для записи
-    //        string tempPath = path + ".tmp";
+            // Заменяем оригинальный файл временным
+            if (File.Exists(path))
+                File.Delete(path);
+            File.Move(tempPath, path);
 
-    //        using (StreamWriter writer = new StreamWriter(tempPath))
-    //        {
-    //            foreach (var payment in GetDailyPayments())
-    //            {
-    //                string jsonLine = JsonConvert.SerializeObject(payment);
-    //                writer.WriteLine(jsonLine);
-    //            }
-    //        }
+            Debug.Log($"Payment with ID {paymentId} successfully removed");
 
-    //        // Заменяем оригинальный файл временным
-    //        if (File.Exists(path))
-    //            File.Delete(path);
-    //        File.Move(tempPath, path);
-
-    //        Debug.Log($"Payment with ID {paymentId} successfully removed");
-    //    }
-    //    catch (Exception ex)
-    //    {
-    //        Debug.LogError($"Error removing payment: {ex.Message}");
-    //    }
-    //}
+            InitPayments();
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError($"Error removing payment: {ex.Message}");
+        }
+    }
 
     public static int InitUnicId() { return payments.Count == 0 ? 0 : payments[payments.Count - 1].id + 1; }
-    public static int InitDailyUnicId() { return dailyPayments.Count == 0 ? 0 : dailyPayments[dailyPayments.Count - 1].id + 1; }
 
     private static void InitPayments()
     {
         payments = GetPayment();
+
+        dailyPayments = GetDailyPayments();
 
         if (PlayerPrefs.GetString("Last Daily Payment") != DateTime.Today.ToString("dd.MM.yyyy"))
         {
@@ -241,7 +262,8 @@ public class Save_Manager : MonoBehaviour
                     description = p.description,
                     isRevenue = p.isRevenue,
                     typePurchase = p.typePurchase,
-                    date = DateTime.Today.ToString("dd.MM.yyyy")
+                    date = DateTime.Today.ToString("dd.MM.yyyy"),
+                    isDailyPayment = p.isDailyPayment,
                 };
                 SetPayment(paymentToAdd);
             }

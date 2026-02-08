@@ -10,8 +10,9 @@ public class Payment
     public TypePurchases typePurchase;
     public string date;
     public string price;
+    public bool isDailyPayment;
 
-    public Payment(int id, string label, string description, bool isRevenue, TypePurchases typePurchase, string date, string price)
+    public Payment(int id, string label, string description, bool isRevenue, TypePurchases typePurchase, string date, string price, bool isDailyPayment)
     {
         this.id = id;
         this.label = label;
@@ -20,6 +21,7 @@ public class Payment
         this.typePurchase = typePurchase;
         this.date = date;
         this.price = price;
+        this.isDailyPayment = isDailyPayment;
     }
 
     // Конструктор по умолчанию (нужен для десериализации)

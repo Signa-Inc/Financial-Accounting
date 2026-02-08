@@ -2456,6 +2456,7 @@ RectTransform:
   - {fileID: 1880325423}
   - {fileID: 322830153}
   - {fileID: 197718304}
+  - {fileID: 1249337413}
   m_Father: {fileID: 237144195}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2973,7 +2974,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -219, y: -117.55}
+  m_AnchoredPosition: {x: -219, y: -117.549805}
   m_SizeDelta: {x: 402.1455, y: 108.4088}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &559945520
@@ -4735,7 +4736,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 845948121}
   m_OnClick:
     m_PersistentCalls:
@@ -6262,13 +6263,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1249337412}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2009892445}
-  m_Father: {fileID: 1326304484}
+  m_Father: {fileID: 486025639}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6660,7 +6661,6 @@ RectTransform:
   - {fileID: 210635495}
   - {fileID: 262418920}
   - {fileID: 845948119}
-  - {fileID: 1249337413}
   m_Father: {fileID: 237144195}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -6688,6 +6688,7 @@ MonoBehaviour:
   date_text: {fileID: 1856610301}
   typePurchase_text: {fileID: 302805492}
   isRevenue_text: {fileID: 618813055}
+  removeDailyPayment_btn: {fileID: 845948120}
   lastPayment:
     id: 0
     label: 
@@ -6696,6 +6697,7 @@ MonoBehaviour:
     typePurchase: 0
     date: 
     price: 
+    isDailyPayment: 0
 --- !u!1 &1431511940
 GameObject:
   m_ObjectHideFlags: 0
@@ -7172,7 +7174,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0017089844, y: -69.14978}
+  m_AnchoredPosition: {x: -0.0017089844, y: -69.1499}
   m_SizeDelta: {x: -0.0067749023, y: -1776.72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1686301143
@@ -8805,19 +8807,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 638796091}
         m_TargetAssemblyTypeName: Add_Payment, Assembly-CSharp
-        m_MethodName: AddToDailyPayments
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 638796087}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
+        m_MethodName: PaymentComplete
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8825,7 +8815,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1910893625
 MonoBehaviour:
@@ -8951,7 +8941,7 @@ MonoBehaviour:
       - m_Target: {fileID: 638796091}
         m_TargetAssemblyTypeName: Add_Payment, Assembly-CSharp
         m_MethodName: PaymentComplete
-        m_Mode: 1
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

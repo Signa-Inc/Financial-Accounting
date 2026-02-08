@@ -17,6 +17,7 @@ public class Transaction : MonoBehaviour
     public TextMeshProUGUI date_text;
     public TextMeshProUGUI typePurchase_text;
     public TextMeshProUGUI isRevenue_text;
+    public Button removeDailyPayment_btn;
 
     public Payment lastPayment;
 
@@ -36,7 +37,10 @@ public class Transaction : MonoBehaviour
         payment.date_text.text = payments[id].date;
         payment.typePurchase_text.text = payments[id].typePurchase.ToString();
         payment.price_txt.text = payments[id].price;
-        
+
+        // Делаем кнопку удаления платежа из ежедневныз покупок интерактивной если этот платеж есть в ежедневных платежах
+        payment.removeDailyPayment_btn.interactable = payments[id].isDailyPayment? true : false;
+
         payment.lastPayment = payments[id];
     }
 
@@ -47,6 +51,6 @@ public class Transaction : MonoBehaviour
 
     public void RemoveFromDailyPayments()
     {
-        //Save_Manager.RemoveDailyPayment(id);
+        Save_Manager.RemoveDailyPayment(id);
     }
 }

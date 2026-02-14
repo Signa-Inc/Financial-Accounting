@@ -15,6 +15,8 @@ public class Add_Payment : MonoBehaviour
     [SerializeField] TMP_InputField price_if;
 
     Payment lastPayment;
+    bool isDailyPayment = false; // Передаём isDailyPayment = true в том случае если платёж должен быть ежедневным
+    bool isTemplate = false; // Передаём isTemplate = true если платёж должен быть шаблоном
 
     void Start()
     {
@@ -30,7 +32,7 @@ public class Add_Payment : MonoBehaviour
         type_dd.AddOptions(allTypesOfPayment);
     }
 
-    public void PaymentComplete(bool isDailyPayment = false) // Передаём true в том случае если платёж должен быть ежедневным 
+    public void PaymentComplete()
     {
         if(isDailyPayment){
             foreach (Payment p in Save_Manager.payments)
@@ -57,6 +59,7 @@ public class Add_Payment : MonoBehaviour
             isRevenue = isRevenue_tgl.isOn,
             price = price_if.text,
             isDailyPayment = isDailyPayment,
+            isTemplate = isTemplate,
         };
 
         lastPayment = newPayment;
@@ -71,5 +74,17 @@ public class Add_Payment : MonoBehaviour
         Main_Manager.instance.UpdatePayments();
 
         gameObject.SetActive(false);
+    }
+
+    public void AddToDailyPayments()
+    {
+        isDailyPayment = true;
+        PaymentComplete();
+    }
+
+    public void AddToTemplate()
+    {
+        isTemplate = true;
+        PaymentComplete();
     }
 }

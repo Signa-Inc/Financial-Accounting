@@ -1,5 +1,4 @@
-﻿using NUnit.Framework.Constraints;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -7,6 +6,9 @@ using UnityEngine;
 public class Main_Manager : MonoBehaviour
 {
     public static Main_Manager instance;
+
+    [Header("Settings")]
+    [SerializeField] int daysToView = 30; // Количество дней которое будет отображаться на главном экране
 
     [Header("Balance")]
     [SerializeField] TextMeshProUGUI balance_txt;
@@ -29,10 +31,7 @@ public class Main_Manager : MonoBehaviour
 
     void Awake() => instance = this;
 
-    void Start()
-    {
-        UpdateBalance();
-    }
+    void Start() => UpdateBalance();
 
     public void UpdateBalance() => balance_txt.text = $"Balance: {Save_Manager.GetBalance()}";
 
@@ -52,11 +51,14 @@ public class Main_Manager : MonoBehaviour
         // Узнаем сколько всего у нас есть дат
         payments = Save_Manager.payments; // Потом будем присваивать транзакции который были совершены за последние 30 дней 
 
+        //for(int i = 0; i < 30; i++) // Получаем только первые 30 платежей
+        //    payments.Add(Save_Manager.payments[i]);
+
         foreach(Payment payment in payments)
         {
             if(!dates.Contains(payment.date)){
                 dates.Add(payment.date);
-                SetNewPaymentSizeInContent();
+                //SetNewPaymentSizeInContent();
             }
         }
 
@@ -78,11 +80,15 @@ public class Main_Manager : MonoBehaviour
                 print($"Key = {date}, value = {payment_dic[date][i]}");
         }
 
+        if(daysToView > dates.Count) // Исправляем баг, когда дней для отображения больше чем реальных дней
+            daysToView = dates.Count;
+
         // Создаем префабы дат и транзакций
-        for(int j = 0; j < payment_dic.Count; j++)
+        for(int j = 0; j < daysToView; j++)
         {
             Date_Prefab df = Instantiate(date_prefab, parent_transform).GetComponent<Date_Prefab>(); // Спавним блок с датой
             df.label_txt.text = dates[j];
+            SetNewPaymentSizeInContent();
 
             float minus = 0;
             float plus = 0;

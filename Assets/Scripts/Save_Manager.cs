@@ -10,6 +10,7 @@ public class Save_Manager : MonoBehaviour
 
     public static List<Payment> payments;
     public static List<Payment> dailyPayments;
+    public static List<Payment> templatePayments;
 
     void Awake() => Init();
 
@@ -264,6 +265,7 @@ public class Save_Manager : MonoBehaviour
                     typePurchase = p.typePurchase,
                     date = DateTime.Today.ToString("dd.MM.yyyy"),
                     isDailyPayment = p.isDailyPayment,
+                    isTemplate = p.isTemplate,
                 };
                 SetPayment(paymentToAdd);
             }

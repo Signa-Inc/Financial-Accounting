@@ -1,29 +1,20 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\_Unity Projects\\Financial-Accounting\\",
+  "WorkspaceRootPath": "F:\\Programming Games\\Financial-Accounting\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6F6FA1AD-F987-8AD5-F735-170A582FB63D}|Assembly-CSharp.csproj|C:\\_Unity Projects\\Financial-Accounting\\assets\\scripts\\save_manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F6FA1AD-F987-8AD5-F735-170A582FB63D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\save_manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6F6FA1AD-F987-8AD5-F735-170A582FB63D}|Assembly-CSharp.csproj|f:\\programming games\\financial-accounting\\assets\\scripts\\all_transactions_manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F6FA1AD-F987-8AD5-F735-170A582FB63D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\all_transactions_manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Met Got\\AppData\\LocalLow\\SignaInc\\Financial Accounting\\payments.json||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F6FA1AD-F987-8AD5-F735-170A582FB63D}|Assembly-CSharp.csproj|C:\\_Unity Projects\\Financial-Accounting\\assets\\scripts\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F6FA1AD-F987-8AD5-F735-170A582FB63D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F6FA1AD-F987-8AD5-F735-170A582FB63D}|Assembly-CSharp.csproj|C:\\_Unity Projects\\Financial-Accounting\\assets\\scripts\\add_payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6F6FA1AD-F987-8AD5-F735-170A582FB63D}|Assembly-CSharp.csproj|f:\\programming games\\financial-accounting\\assets\\scripts\\add_payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F6FA1AD-F987-8AD5-F735-170A582FB63D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\add_payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F6FA1AD-F987-8AD5-F735-170A582FB63D}|Assembly-CSharp.csproj|C:\\_Unity Projects\\Financial-Accounting\\assets\\scripts\\main_manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F6FA1AD-F987-8AD5-F735-170A582FB63D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\main_manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Signa_Inc\\AppData\\LocalLow\\SignaInc\\Financial Accounting\\payments.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F6FA1AD-F987-8AD5-F735-170A582FB63D}|Assembly-CSharp.csproj|c:\\_unity projects\\financial-accounting\\assets\\scripts\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F6FA1AD-F987-8AD5-F735-170A582FB63D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Met Got\\AppData\\LocalLow\\SignaInc\\Financial Accounting\\payments.json||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,7 +24,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -41,81 +32,49 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "payments.json",
-              "DocumentMoniker": "C:\\Users\\Met Got\\AppData\\LocalLow\\SignaInc\\Financial Accounting\\payments.json",
-              "RelativeDocumentMoniker": "..\\..\\Users\\Met Got\\AppData\\LocalLow\\SignaInc\\Financial Accounting\\payments.json",
-              "ToolTip": "C:\\Users\\Met Got\\AppData\\LocalLow\\SignaInc\\Financial Accounting\\payments.json",
-              "RelativeToolTip": "..\\..\\Users\\Met Got\\AppData\\LocalLow\\SignaInc\\Financial Accounting\\payments.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-02-07T18:43:00.397Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Save_Manager.cs",
-              "DocumentMoniker": "C:\\_Unity Projects\\Financial-Accounting\\Assets\\Scripts\\Save_Manager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Save_Manager.cs",
-              "ToolTip": "C:\\_Unity Projects\\Financial-Accounting\\Assets\\Scripts\\Save_Manager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Save_Manager.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAkwFEAAAALAAAAAAAAAA==",
+              "Title": "All_Transactions_Manager.cs",
+              "DocumentMoniker": "F:\\Programming Games\\Financial-Accounting\\Assets\\Scripts\\All_Transactions_Manager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\All_Transactions_Manager.cs",
+              "ToolTip": "F:\\Programming Games\\Financial-Accounting\\Assets\\Scripts\\All_Transactions_Manager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\All_Transactions_Manager.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowDsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-05T16:52:06.211Z",
+              "WhenOpened": "2026-02-11T18:23:12.973Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Main_Manager.cs",
-              "DocumentMoniker": "C:\\_Unity Projects\\Financial-Accounting\\Assets\\Scripts\\Main_Manager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Main_Manager.cs",
-              "ToolTip": "C:\\_Unity Projects\\Financial-Accounting\\Assets\\Scripts\\Main_Manager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Main_Manager.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAnwC0AAAAiAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Add_Payment.cs",
+              "DocumentMoniker": "F:\\Programming Games\\Financial-Accounting\\Assets\\Scripts\\Add_Payment.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Add_Payment.cs",
+              "ToolTip": "F:\\Programming Games\\Financial-Accounting\\Assets\\Scripts\\Add_Payment.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Add_Payment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-07T18:32:44.038Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Payment.cs",
-              "DocumentMoniker": "C:\\_Unity Projects\\Financial-Accounting\\Assets\\Scripts\\Payment.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Payment.cs",
-              "ToolTip": "C:\\_Unity Projects\\Financial-Accounting\\Assets\\Scripts\\Payment.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Payment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-07T18:36:18.658Z",
+              "WhenOpened": "2026-02-11T18:19:02.174Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Transaction.cs",
-              "DocumentMoniker": "C:\\_Unity Projects\\Financial-Accounting\\Assets\\Scripts\\Transaction.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Transaction.cs",
-              "ToolTip": "C:\\_Unity Projects\\Financial-Accounting\\Assets\\Scripts\\Transaction.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Transaction.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwCgAAAB5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-05T17:11:37.828Z",
+              "Title": "payments.json",
+              "DocumentMoniker": "C:\\Users\\Signa_Inc\\AppData\\LocalLow\\SignaInc\\Financial Accounting\\payments.json",
+              "ToolTip": "C:\\Users\\Signa_Inc\\AppData\\LocalLow\\SignaInc\\Financial Accounting\\payments.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-11T10:41:36.645Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Add_Payment.cs",
-              "DocumentMoniker": "C:\\_Unity Projects\\Financial-Accounting\\Assets\\Scripts\\Add_Payment.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Add_Payment.cs",
-              "ToolTip": "C:\\_Unity Projects\\Financial-Accounting\\Assets\\Scripts\\Add_Payment.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Add_Payment.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAgwCAAAAB9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-05T16:52:03.121Z",
-              "EditorCaption": ""
+              "Title": "payments.json",
+              "DocumentMoniker": "C:\\Users\\Met Got\\AppData\\LocalLow\\SignaInc\\Financial Accounting\\payments.json",
+              "ToolTip": "C:\\Users\\Met Got\\AppData\\LocalLow\\SignaInc\\Financial Accounting\\payments.json",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-07T18:43:00.397Z"
             }
           ]
         }

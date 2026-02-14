@@ -192,6 +192,57 @@ public class Save_Manager : MonoBehaviour
 
         return payments;
     }
+
+    public static List<Payment> GetTemplatePayments()
+    {
+        string path = Application.persistentDataPath + "/payments.json";
+        List<Payment> payments = new List<Payment>();
+
+        if (!File.Exists(path)) return payments;
+
+        var lines = File.ReadAllLines(path);
+        bool isFindedCopy = false;
+        //int idCount = 0;
+
+        foreach (string line in lines)
+        {
+            if (!string.IsNullOrWhiteSpace(line))
+            {
+                try
+                {
+                    Payment p = JsonConvert.DeserializeObject<Payment>(line);
+
+                    // Проверка, действительно ли этот платёж является шаблоном?
+                    if (!p.isTemplate)
+                        continue;
+
+                    // Проверка, на копию уже существующего платежа во избежание багов
+                    if (payments.Count != 0)
+                        foreach (var payment in payments)
+                            if (p.label == payment.label)
+                                isFindedCopy = true;
+
+                    // Проверка, найдена ли копия? Почему мы это не сделали в предыдушем условии, потому что он выходил из цикла только в том условии, а не из основного цикла 
+                    if (isFindedCopy)
+                        continue;
+
+                    // Присваиваем правильный id, нужен для того чтобы не было пустых id при удалении платежа из списка
+                    //if (p.id != idCount)
+                    //    p.id = idCount;
+
+                    //idCount++;
+                    payments.Add(p);
+                }
+                catch (JsonException ex)
+                {
+                    Debug.LogError("Ошибка десериализации строки: " + ex.Message);
+                }
+            }
+        }
+
+        return payments;
+    }
+
     public static void RemoveDailyPayment(int paymentId)
     {
         // Находим покупку для удаления
@@ -249,6 +300,7 @@ public class Save_Manager : MonoBehaviour
     {
         payments = GetPayment();
 
+        // Инициализируем ежедневные платежи
         dailyPayments = GetDailyPayments();
 
         if (PlayerPrefs.GetString("Last Daily Payment") != DateTime.Today.ToString("dd.MM.yyyy"))
@@ -273,6 +325,10 @@ public class Save_Manager : MonoBehaviour
             PlayerPrefs.SetString("Last Daily Payment", DateTime.Today.ToString("dd.MM.yyyy"));
         }
 
+        // Инициализируем шаблоны платежей
+        templatePayments = GetTemplatePayments();
+
+        // Обновляем платежы на главном экране
         Main_Manager.instance.UpdatePayments();
     }
 

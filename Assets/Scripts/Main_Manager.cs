@@ -16,7 +16,7 @@ public class Main_Manager : MonoBehaviour
     [Header("Transactions")]
     public RectTransform parent_transform;
     public GameObject transaction_prefab;
-    public GameObject transaction_fullPanel;
+    public Transaction_Panel transaction_fullPanel;
     public GameObject date_prefab;
 
     [Header("Error")]
@@ -25,7 +25,7 @@ public class Main_Manager : MonoBehaviour
 
     [HideInInspector, Header("Init Payments")]
     private List<Payment> payments;
-    private Transaction trans;
+    private Transaction_Prefab trans;
     private List<string> dates; // В 0 индексе самая старая дата
     private Dictionary<string, List<int>> payment_dic;
 
@@ -42,7 +42,7 @@ public class Main_Manager : MonoBehaviour
             Destroy(parent_transform.GetChild(i).gameObject);
 
         payments = new List<Payment>();
-        trans = new Transaction();
+        trans = new Transaction_Prefab();
         dates = new List<string>();
         payment_dic = new Dictionary<string, List<int>>();
 
@@ -98,7 +98,7 @@ public class Main_Manager : MonoBehaviour
             {
                 try
                 {
-                    trans = Instantiate(transaction_prefab, parent_transform).GetComponent<Transaction>();
+                    trans = Instantiate(transaction_prefab, parent_transform).GetComponent<Transaction_Prefab>();
 
                     trans.id = payments[item].id;
                     trans.label_txt.text = payments[item].label;

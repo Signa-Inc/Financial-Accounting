@@ -64,7 +64,7 @@ public class Add_Payment : MonoBehaviour
 
         lastPayment = newPayment;
 
-        Transaction trans = Instantiate(Main_Manager.instance.transaction_prefab, Main_Manager.instance.parent_transform).GetComponent<Transaction>();
+        Transaction_Prefab trans = Instantiate(Main_Manager.instance.transaction_prefab, Main_Manager.instance.parent_transform).GetComponent<Transaction_Prefab>();
 
         trans.id = Save_Manager.InitUnicId();
         trans.label_txt.text = newPayment.label;
